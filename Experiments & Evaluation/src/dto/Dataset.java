@@ -4,7 +4,8 @@ public enum Dataset {
 	SMS_SMALL(1,"SMS_small"),
 	SMS_LARGE(2,"SMS_large"),
 	CFMP(3,"CFMP"),
-	WEB(4,"WEB");
+	WEB(4,"WEB"),
+	DEFAULT(0,"Default");
 	
 	private int id;
 	private String name;
