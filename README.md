@@ -1,6 +1,6 @@
-# Lexical Normalization
+# Introduction
 
-This project finds lexical normalization from a dataset and evaluates the performance compared to a gold standard lexicon.
+This project finds lexical variations within a dataset and evaluates the performance compared to a gold standard lexicon.
 
 # Preprocessing and Normalization
 
