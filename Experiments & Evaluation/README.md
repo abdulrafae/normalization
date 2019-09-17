@@ -1,7 +1,4 @@
-**************************************
-
-Folder structure
-**************************************
+# Folder structure
 
 *****Input Files folder has the input files from all 4 dataset along with the gold standard file.
 
