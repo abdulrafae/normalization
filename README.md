@@ -4,7 +4,7 @@ This project finds lexical variations within a dataset and evaluates the perform
 
 # Preprocessing and Normalization
 
-Preprocess the raw data using the gold standard file
+Preprocess the raw data using the gold standard file.
 ```
 mkdir -p UrduPhone/Input\ Files/
 mkdir -p UrduPhone/Output\ Files/
@@ -13,14 +13,14 @@ cp raw_data UrduPhone/Input\ Files/Dataset.txt
 cd UrduPhone
 python main.py
 ```
-Copy these preporcessed files and the gold standard file to Lexical Normalization project
+Copy these preporcessed files and the gold standard file to Lexical Normalization project.
 ```
 cd ../
 mkdir -p Experiments\ &\ Evaluation/Input\ Files/Default/
 cp UrduPhone/Output\ Files/* Experiments\ &\ Evaluation/Input\ Files/Default/
 cp UrduPhone/Input\ Files/Gold\ Standard.txt Experiments\ &\ Evaluation/Input\ Files/Default/
 ```
-Import the Lexical Normalization project in a JAVA IDE (e.g. Eclipse) and run
+Import the Lexical Normalization project in a JAVA IDE (e.g. Eclipse) and run.
 ```
 Build and Run file src/frontend/LexNorm.java
 ```
