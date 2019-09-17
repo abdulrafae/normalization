@@ -4,7 +4,7 @@ from nltk.tokenize import WordPunctTokenizer
 
 def get_wordslist():
 	# getting words list that in standard corpus
-	ff=open("./Output Files/Word List.txt","r") 
+	ff=open("./Output Files/Default - Word List.txt","r") 
 	text=ff.read(); text = text.split() ; ff.close()
 	words= text
 	
@@ -41,8 +41,8 @@ def get_words_and_write_UrduPhone():
 	for key in UrduPhone_dict.keys():
 		UrduPhone_ids[key]=i
 		i+=1
-	ff=open("./Output Files/UrduPhone - ID.txt","w")
-	f2=open("./Output Files/UrduPhone.txt","w")
+	ff=open("./Output Files/Default - UrduPhone - ID.txt","w")
+	f2=open("./Output Files/Default - UrduPhone.txt","w")
 	for w in words:
 		UrduPhone = phonetics.UrduPhone(w)
 		ff.write(w+","+UrduPhone+","+str(UrduPhone_ids[UrduPhone])+"\n")
@@ -50,7 +50,7 @@ def get_words_and_write_UrduPhone():
 	f2.close()	
 	ff.close()
 def getText():
-	ff = open("./Input Files/SMS_small Dataset.txt","r")
+	ff = open("./Input Files/Dataset.txt","r")
 	text = ff.read()
 	ff.close()
 
@@ -87,7 +87,7 @@ def _5NextList():
 	ff=open("./Output Files/bigram.txt","r")
 	text = ff.read() ; text = text.split("\n")
 	ff.close()
-	ff=open("./Output Files/5 Next Word ID List.txt","w")
+	ff=open("./Output Files/Default - 5  Next Word ID List.txt","w")
 	
 	
 	words = get_wordslist()
@@ -119,7 +119,7 @@ def _5PrevList():
 	ff=open("./Output Files/bigram.txt","r")
 	text = ff.read() ; text = text.split("\n")
 	ff.close()
-	ff=open("./Output Files/5 Previous Word ID List.txt","w")
+	ff=open("./Output Files/5  Prev Word ID List.txt","w")
 	
 	
 	words = get_wordslist()
@@ -152,30 +152,30 @@ def Write_words_IDs():
 	
 	words = get_wordslist()
 	ids = words_ids(words)
-	ff=open("./Output Files/Word List.txt","w")
+	ff=open("./Output Files/Default - Word List.txt","w")
 	for key, val in ids.items():
 		ff.write(key+" "+str(val)+"\n")
 	ff.close
 def PreProcess5Files():
-	ff=open("./Output Files/5 Previous Word ID List.txt","r")
+	ff=open("./Output Files/Default - 5 Previous Word ID List.txt","r")
 	text = ff.read(); ff.close()
 	text = text.split("\n")
-	ff=open("./Output Files/5 Previous Word ID List.txt","w")
+	ff=open("./Output Files/Default - 5 Previous Word ID List.txt","w")
 	for t in text:
 		if t.find(",")!=-1:
 			ff.write(t+"\n")
 	ff.close()
 	
-	ff=open("./Output Files/5 Next Word ID List.txt","r")
+	ff=open("./Output Files/Default - 5 Next Word ID List.txt","r")
 	text = ff.read(); ff.close()
 	text = text.split("\n")
-	ff=open("./Output Files/5 Next Word ID List.txt","w")
+	ff=open("./Output Files/Default - 5 Next Word ID List.txt","w")
 	for t in text:
 		if t.find(",")!=-1:
 			ff.write(t+"\n")
 	ff.close()
 def getUrduPhoneIds():
-	ff = open("./Output Files/UrduPhone - ID.txt", "r")
+	ff = open("./Output Files/Default - UrduPhone - ID.txt", "r")
 	text = ff.read(); ff.close()
 	ids = dict()
 	text = text.split()
@@ -185,7 +185,7 @@ def getUrduPhoneIds():
 	return ids
 def getWordsIds():
 
-	ff = open("./Output Files/Word List.txt", "r")
+	ff = open("./Output Files/Default - Word List.txt", "r")
 	text = ff.read(); ff.close()
 	ids = dict()
 	text = text.split("\n")
@@ -195,7 +195,7 @@ def getWordsIds():
 		ids[words[1]] = words[0]
 	return ids
 def getUrduPhoneEncodings():
-	ff = open("./Output Files/UrduPhone - ID.txt", "r")
+	ff = open("./Output Files/Default - UrduPhone - ID.txt", "r")
 	text = ff.read(); ff.close()
 	ids = dict()
 	text = text.split()
@@ -209,10 +209,10 @@ def PreProcess5FilesForUrduPhone():
 	UrduPhone_Encodings = getUrduPhoneEncodings()
 	words_ids = getWordsIds()
 	
-	ff=open("./Output Files/5 Previous Word ID List.txt","r")
+	ff=open("./Output Files/Default - 5 Prev Word ID List.txt","r")
 	text = ff.read(); ff.close()
 	text = text.split("\n")
-	ff=open("./Output Files/5 Previous UrduPhone ID List.txt","w")
+	ff=open("./Output Files/Default - 5 Prev UrduPhone ID List.txt","w")
 	for t in text:
 		words = t.split(",")
 		ff.write(words[0])
@@ -223,10 +223,10 @@ def PreProcess5FilesForUrduPhone():
 		ff.write("\n")
 	ff.close()
 
-	ff=open("./Output Files/5 Next Word ID List.txt","r")
+	ff=open("./Output Files/Default - 5 Next Word ID List.txt","r")
 	text = ff.read(); ff.close()
 	text = text.split("\n")
-	ff=open("./Output Files/5 Next UrduPhone ID List.txt","w")
+	ff=open("./Output Files/Default - 5 Next UrduPhone ID List.txt","w")
 	for t in text:
 		words = t.split(",")
 		ff.write(words[0])
@@ -237,7 +237,7 @@ def PreProcess5FilesForUrduPhone():
 		ff.write("\n")
 	ff.close()
 def write_UrduPhone_clusters():
-	ff=open("./Output Files/UrduPhone_clusters.txt","w")
+	ff=open("./Output Files/Default - UrduPhone_clusters.txt","w")
 	words = get_wordslist()
 	UrduPhone_dict  = sound_codes(words)
 	for key,val in UrduPhone_dict.items():
@@ -266,12 +266,12 @@ def WordList():
 				except: unigrams[words[i]] =1
 			i+=1
 	
-	ff=open("./Output Files/Word List.txt","w")
+	ff=open("./Output Files/Default - Word List.txt","w")
 	for key, val in unigrams.items():
 		ff.write(key+"\n")
 	ff.close
 	
-	ff=open("./Output Files/Frequent WordList.txt","w")
+	ff=open("./Output Files/Default - Frequent Word List.txt","w")
 	for key, val in unigrams.items():
 		if val>=5:
 			ff.write(key+"\n")
