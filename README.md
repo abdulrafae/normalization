@@ -27,4 +27,4 @@ Build and Run file src/frontend/LexNorm.java
 
 
 # Paper
-Abdul et. al. "A Clustering Framework for Lexical Normalization of Roman Urdu", *Journal of Natural Language Engineering (accepted)*, 2019
+Abdul et. al. "A Clustering Framework for Lexical Normalization of Roman Urdu", *Journal of Natural Language Engineering*, 2020
