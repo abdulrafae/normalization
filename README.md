@@ -23,6 +23,7 @@ cp UrduPhone/Input\ Files/Gold\ Standard.txt Experiments\ &\ Evaluation/Input\ F
 Import the Lexical Normalization project in a JAVA IDE (e.g. Eclipse) and run.
 ```
 Build and Run file src/frontend/LexNorm.java
+Update lines 35-37 in LexNorm.java for different clustering scenarios
 ```
 
 
